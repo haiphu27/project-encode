@@ -2,10 +2,8 @@ const path = require('path')
 const fs = require("fs");
 const appRoot = require("app-root-path");
 
-module.exports = class Load {
-    static load_all_router(app) {
-        const rootPath = appRoot.path;
-        let routePath = path.join(rootPath, "src", "routes");
+module.exports = (app)=> {
+    let routePath = path.join(appRoot.path, "src", "routes");
         fs.readdirSync(routePath).forEach(async (filename) => {
             try {
                 let name = filename.split('.')[0]
@@ -15,5 +13,5 @@ module.exports = class Load {
             }
         });
     }
-}
+
 
