@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "app-root-path": "^3.1.0",
+    "axios": "^0.27.2",
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
@@ -21,6 +22,7 @@
     "nodemon": "^2.0.20",
     "redis": "^4.3.1",
     "sequelize": "^6.23.2",
+    "sqlite3": "^5.1.1",
     "util": "^0.12.4"
   }
 }
