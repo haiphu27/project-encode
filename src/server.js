@@ -4,12 +4,11 @@ const cors = require("cors");
 require('dotenv').config()
 const {redisClient} = require('./config/connect-redis');
 const load_router = require('./loadfile/load-router')
+const load_model = require('./loadfile/load-model')
 const {sequelize} = require('./config/connect-mysql')
-const table_user = require('./model/user')
 
 sequelize.authenticate().then(async () => {
-   await table_user(sequelize)
-    console.log('connected DB successfully')
+    await load_model(sequelize)
 }).catch((error) => {
     console.error('Unable to connect to the database: ', error);
 });

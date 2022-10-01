@@ -1,4 +1,5 @@
 const {Sequelize} = require("sequelize");
+
 const mysql = {
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
@@ -23,6 +24,7 @@ const sequelize = new Sequelize(
         }
 }
 );
+
 
 module.exports ={sequelize}
 
