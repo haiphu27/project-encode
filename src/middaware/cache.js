@@ -1,4 +1,4 @@
-const {redisClient} = require('../config/connect-redis')
+const {redisClient} = require('../config/setting');
 
 module.exports=async function cache(req, res, next) {
     const key = req.route.path.split('/')[1];

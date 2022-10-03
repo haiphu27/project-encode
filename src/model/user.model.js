@@ -5,12 +5,10 @@ module.exports=class User{
     static init(sequelize){
         return sequelize.define('users',{
             id: {
-                type: DataTypes.INTEGER,
+                type: DataTypes.INTEGER(11),
                 autoIncrement: true,
                 primaryKey: true,
-                validate:{
-                    notEmpty: true
-                }
+                allowNull: false,
             },
             username: {
                 type: DataTypes.STRING,
