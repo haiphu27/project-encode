@@ -1,11 +1,12 @@
 const jwt = require('jsonwebtoken');
+const {secret_jwt}=require('../config/setting')
 
 module.exports = async (req, res, next) => {
     try {
         const token = req.headers["authorization"];
         if (!token) return res.status(401).json({errMessage: "Please Login"});
 
-        await jwt.verify(token, process.env.JWT_SECRET, async (err, decode) => {
+        await jwt.verify(token, secret_jwt, async (err, decode) => {
             if (err){
                 return res.status(401).json({errMessage: "Authorization token invalid", details: err.message});
             }
