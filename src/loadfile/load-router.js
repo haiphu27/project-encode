@@ -16,6 +16,6 @@ module.exports = (app,rateLimit)=> {
                 console.log(error.message);
             }
         });
-    }
+}
 
-
+~
