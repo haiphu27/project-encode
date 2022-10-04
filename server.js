@@ -4,11 +4,15 @@ const cors = require("cors");
 require('dotenv').config()
 const helmet = require('helmet')
 const xss = require('xss-clean')
+const path=require('path')
 const rateLimit = require("express-rate-limit");
 const { redisClient } = require('./config/setting');
-const load_router = require('./loadfile/load-router')
-const load_model = require('./loadfile/load-model')
+const load_router = require('./src/loadfile/load-router')
+const load_model = require('./src/loadfile/load-model')
 const { sequelize } = require('./config/setting')
+const {logger}=require('./src/util/logger')
+const logj4=require('log4js')
+
 
 //connect mysql + redis load +model 
 sequelize.authenticate().then(async () => {
@@ -59,5 +63,25 @@ load_router(app, rate_limit)
 app.use((err, req, res, next) => {
     return res.status(500).json({ message: err.message });
 })
+
+app.use(
+    logj4.connectLogger(logger, {
+        level: logj4.levels.INFO,
+    }
+))
+
+const path_log=
+{
+    uploads:{
+        baseUri:'/static/uploads/',
+        folder:'./uploads/'
+    }
+}
+
+Object.values(path_log).forEach(({baseUri,folder}) => {
+    logger.info(`static files`, baseUri, '->', folder);
+app.use(baseUri, express.static(path.join(__dirname, folder)));
+})
+
 
 module.exports = app;

@@ -1,4 +1,4 @@
-const {sequelize,set,secret_jwt} = require("../config/setting");
+const {sequelize,set_redis,secret_jwt} = require("../../config/setting");
 const UserModel = require('../model/user.model').init(sequelize)
 const CountryModel = require('../model/country.model').init(sequelize)
 const bcrypt = require('bcrypt')
@@ -43,8 +43,9 @@ class UserController {
             const list_country=await CountryModel.findAll()
             const array_list_country=[]
             list_country.forEach(element => array_list_country.push(element.dataValues));
+
             //redis
-            set(key,JSON.stringify(array_list_country),{
+            set_redis(key,JSON.stringify(array_list_country),{
                 EX:3600
             })
            return  res.status(200).json(array_list_country)
