@@ -1,4 +1,4 @@
-const {redisClient} = require('../../config/setting');
+const {redisClient} = require('../util/redispool');
 
 module.exports=async function cache(req, res, next) {
     const key = req.route.path.split('/')[1];

@@ -1,8 +1,12 @@
-const {sequelize,set_redis,secret_jwt} = require("../../config/setting");
-const UserModel = require('../model/user.model').init(sequelize)
-const CountryModel = require('../model/country.model').init(sequelize)
 const bcrypt = require('bcrypt')
 const jwt = require("jsonwebtoken");
+
+const {sequelize,secret_jwt} = require("../../config/setting");
+const {set_redis}=require("../util/redispool")
+const pool = require('../util/mysqlpool')
+const {logger}=require('../util/logger')
+const UserModel = require('../db/models/user').init(sequelize)
+
 
 class UserController {
 
@@ -37,18 +41,16 @@ class UserController {
           }
     }
 
-     async list_country(req, res) {
+    async list_country(req, res,next) {
         try {
             const key = req.route.path.split('/')[1];
-            const list_country=await CountryModel.findAll()
-            const array_list_country=[]
-            list_country.forEach(element => array_list_country.push(element.dataValues));
-
+            const sql='select * from country'
+            const list_country=await pool.query(sql)
             //redis
-            set_redis(key,JSON.stringify(array_list_country),{
+            set_redis(key,JSON.stringify(list_country[0]),{
                 EX:3600
             })
-           return  res.status(200).json(array_list_country)
+           return  res.status(200).json(list_country[0])
         }catch (e) {
             next(e)        
         }

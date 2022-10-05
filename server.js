@@ -6,25 +6,13 @@ const helmet = require('helmet')
 const xss = require('xss-clean')
 const path=require('path')
 const rateLimit = require("express-rate-limit");
-const { redisClient } = require('./config/setting');
+const { redisClient } = require('./src/util/redispool');
+const  redisPool  = require('./src/util/redispool');
 const load_router = require('./src/loadfile/load-router')
 const load_model = require('./src/loadfile/load-model')
-const { sequelize } = require('./config/setting')
 const {logger}=require('./src/util/logger')
 const logj4=require('log4js')
 
-
-//connect mysql + redis load +model 
-sequelize.authenticate().then(async () => {
-    await load_model(sequelize)
-    await redisClient.connect()
-        .then(() => {
-            console.log('connected to Redis server')
-        })
-        .catch(err => console.error(err))
-}).catch((error) => {
-    console.error('Unable to connect to the database: ', error);
-});
 
 //add header
 app.use((err,req,res,next)=>{
@@ -49,9 +37,9 @@ app.use(cors())
 app.use(helmet())
 app.use(xss())
 
-//rate limit (max 60 request per 10 minutes)
+//rate limit (max 60 request per 60 minutes)
 const rate_limit = rateLimit({
-    windowMs: 10 * 60 * 1000, // 10 minutes
+    windowMs: 60 * 60 * 1000, // 60 minutes
     max: 60, // limit each IP to 100 requests per windowMs
     message: "Too many requests from this IP, please try again after an hour"
 })
