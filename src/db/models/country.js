@@ -1,8 +1,5 @@
-const {DataTypes}=require('sequelize')
+module.exports= (sequelize,DataTypes) => {
 
-module.exports=class Country{
-
-    static init(sequelize){
         return sequelize.define('country',{
             id: {
                 type: DataTypes.INTEGER,
@@ -26,11 +23,12 @@ module.exports=class Country{
                     notEmpty: true
                 }
             }
-        },{
+        },
+        {
             timestamps:false,
             tableName:'country',
         })
-    }
+
 }
 
 

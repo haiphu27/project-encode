@@ -1,12 +1,16 @@
-const { Sequelize } = require('sequelize');
+const { Sequelize,DataTypes } = require('sequelize');
 const path = require('path')
 const fs = require('fs')
-const config = require('../../config/setting');
+const config = require('../../config/setting')
+const {logger} = require("../util/logger");
+const sequelizePaginate = require('sequelize-paginate')
 
 
 class Database {
 
-    static init(config) {
+    static async init(config) {
+
+        if (this.sequelize) return;
 
         this.sequelize = new Sequelize(
             config.database,
@@ -14,8 +18,9 @@ class Database {
             config.password,
             config.options
         );
-        
-        //load all model
+
+        this.converter = config.model_converter
+
         this.loadModels()
 
         this.createModelsAssociations();
@@ -23,19 +28,18 @@ class Database {
     }
 
     static loadModels() {
-        this.model={}
+        this.models={}
 
         const modelFileNames = [
             ...this.getModelFiles('../db/models'),
-            ...this.getModelFiles('../db')
         ]
-        
         modelFileNames.forEach(filesName => {
-           let model= this.sequelize.import(filesName)
-        //    let modelName = model.modalNameAlias ? model.modalNameAlias : this.convertModelName(model.name);
-        //    // logger.info(modelName);
-        //    this.models[modelName] = model;
-        //    sequelizePaginate.paginate(model);
+            let model = this.sequelize.import(filesName);
+
+             let modelName =  model.modalNameAlias?model.modalNameAlias:this.convertModelName(model.name);
+            console.log(modelName)
+           this.models[modelName] = model;
+           // sequelizePaginate.paginate(model);
         })
     }
 
@@ -48,6 +52,29 @@ class Database {
         return fileNames
     }
 
+    static convertModelName(name){
+        let converter = this.converter;
+        for(let [k,v] of Object.entries(converter.prefix)){
+            if(name.startsWith(k)){
+                console.log(`${v}${name.slice(k.length)}`)
+                name = `${v}${name.slice(k.length)}`;
+            }
+        }
+
+        for(let [k,v] of Object.entries(converter.suffix)){
+            if(name.endsWith(k))
+                name = `${name.slice(0, -k.length)}${v}`;
+        }
+
+        name = name.split('_')
+            .map(w => w[0].toUpperCase() + w.slice(1).toLowerCase())
+            .join('');
+
+        return name;
+    }
+
+
+
     static createModelsAssociations() {
         Object
             .values(this.models)
@@ -58,5 +85,4 @@ class Database {
 }
 
 Database.init(config.sequelize)
-
-module.exports = Database;
+module.exports =Database;

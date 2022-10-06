@@ -1,9 +1,5 @@
-const {DataTypes}=require('sequelize')
-
-module.exports=class User{
-
-    static init(sequelize){
-        return sequelize.define('users',{
+module.exports= (sequelize,DataTypes) => {
+        return sequelize.define('user',{
             id: {
                 type: DataTypes.INTEGER(11),
                 autoIncrement: true,
@@ -26,10 +22,8 @@ module.exports=class User{
             }
         },{
             timestamps:false,
-            tableName:'users'
+            tableName:'user'
         })
-
-    }
 }
 
 
