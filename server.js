@@ -6,13 +6,9 @@ const helmet = require('helmet')
 const xss = require('xss-clean')
 const path=require('path')
 const rateLimit = require("express-rate-limit");
-const { redisClient } = require('./src/util/redispool');
-const  redisPool  = require('./src/util/redispool');
-const load_router = require('./src/loadfile/load-router')
-const load_model = require('./src/loadfile/load-model')
 const {logger}=require('./src/util/logger')
-const logj4=require('log4js')
-
+const log4js=require('log4js')
+const fs = require("fs");
 
 //add header
 app.use((err,req,res,next)=>{
@@ -44,8 +40,23 @@ const rate_limit = rateLimit({
     message: "Too many requests from this IP, please try again after an hour"
 })
 
-//load all router
-load_router(app, rate_limit)
+function load_router(app, baseUri) {
+    // Tự động tạo routing
+    let routerFolder = path.join(__dirname, "./src/routes")
+    fs.readdirSync(routerFolder)
+        .filter(n => n.toLowerCase().endsWith('.router.js'))
+        .map(n => n.replace('.js', ''))
+        .forEach(name => {
+            const routerFile = `${routerFolder}/${name}`;
+            const routerPath =
+                name === 'index.router' ? '' : `${name.replace('.router', '')}`;
+            const urlPath = `${baseUri}${routerPath}`;
+            // logger.info(`loading router ${urlPath} -> ${routerFile}.js`);
+            app.use(urlPath,require(routerFile));
+        });
+}
+
+load_router(app,'/api/')
 
 //error handler
 app.use((err, req, res, next) => {
@@ -53,8 +64,8 @@ app.use((err, req, res, next) => {
 })
 
 app.use(
-    logj4.connectLogger(logger, {
-        level: logj4.levels.INFO,
+    log4js.connectLogger(logger, {
+        level: log4js.levels.INFO,
     }
 ))
 
