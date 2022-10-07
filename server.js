@@ -14,7 +14,7 @@ const fs = require("fs");
 app.use((err,req,res,next)=>{
     //web to alow to connect
     res.setHeader("Access-Control-Allow-Origin", "*");
-    
+
     //alow to request method
     res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
 
@@ -51,6 +51,7 @@ function load_router(app, baseUri) {
             const routerPath =
                 name === 'index.router' ? '' : `${name.replace('.router', '')}`;
             const urlPath = `${baseUri}${routerPath}`;
+            console.log('routerFile...............', routerFile)
             // logger.info(`loading router ${urlPath} -> ${routerFile}.js`);
             app.use(urlPath,require(routerFile));
         });
@@ -62,6 +63,14 @@ load_router(app,'/api/')
 app.use((err, req, res, next) => {
     return res.status(500).json({ message: err.message });
 })
+// app.use((err, req, res, next) => {
+//     const status = err.status || 500;
+//     const message = err.message || "something went wrong";
+//     res.status(status).json({
+//         success: false,
+//         status,
+//         message
+//     })
 
 app.use(
     log4js.connectLogger(logger, {

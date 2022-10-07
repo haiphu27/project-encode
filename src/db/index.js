@@ -1,16 +1,13 @@
-const { Sequelize,DataTypes } = require('sequelize');
+const { Sequelize } = require('sequelize');
 const path = require('path')
 const fs = require('fs')
 const config = require('../../config/setting')
 const {logger} = require("../util/logger");
-const sequelizePaginate = require('sequelize-paginate')
 
 
 class Database {
 
     static async init(config) {
-
-        if (this.sequelize) return;
 
         this.sequelize = new Sequelize(
             config.database,
@@ -37,7 +34,6 @@ class Database {
             let model = this.sequelize.import(filesName);
 
              let modelName =  model.modalNameAlias?model.modalNameAlias:this.convertModelName(model.name);
-            console.log(modelName)
            this.models[modelName] = model;
            // sequelizePaginate.paginate(model);
         })
@@ -56,7 +52,6 @@ class Database {
         let converter = this.converter;
         for(let [k,v] of Object.entries(converter.prefix)){
             if(name.startsWith(k)){
-                console.log(`${v}${name.slice(k.length)}`)
                 name = `${v}${name.slice(k.length)}`;
             }
         }
@@ -65,15 +60,8 @@ class Database {
             if(name.endsWith(k))
                 name = `${name.slice(0, -k.length)}${v}`;
         }
-
-        name = name.split('_')
-            .map(w => w[0].toUpperCase() + w.slice(1).toLowerCase())
-            .join('');
-
         return name;
     }
-
-
 
     static createModelsAssociations() {
         Object
