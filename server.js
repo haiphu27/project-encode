@@ -51,7 +51,6 @@ function load_router(app, baseUri) {
             const routerPath =
                 name === 'index.router' ? '' : `${name.replace('.router', '')}`;
             const urlPath = `${baseUri}${routerPath}`;
-            console.log('routerFile...............', routerFile)
             // logger.info(`loading router ${urlPath} -> ${routerFile}.js`);
             app.use(urlPath,require(routerFile));
         });

@@ -24,12 +24,9 @@ async function login(req, res,next) {
     }
 }
 
-
-
 async function list(req, res, next) {
     res.status(200).json({data:123})
 }
-
 
 router.postS(__filename,'/login',login,false)
 router.postS(__filename,'/list',list,true)
