@@ -5,6 +5,7 @@ const {secret_jwt} = require("../../config/setting")
 const {logger} = require("../util/logger");
 const {_T} = require("../util/transaction");
 const db= require("../db/index")
+const redispool= require("../util/redispool")
 
 function process_exception(req, res, error) {
     let msg = error.message;
@@ -41,11 +42,18 @@ async function verify_token(token) {
     })
 }
 
+
+
+// async function caches(req, res, ) {
+//     console.log(1111111)
+//     //
+// }
+
 function safefy(callback, validateToken,exception) {
     if (callback.constructor.name === "AsyncFunction") {
         return async function (req, res, ...arg) {
-
             try {
+
                 if (!validateToken) return callback(req, res, ...arg);
                 const {authorization} = Object.assign({}, req.query, req.headers);
                 if (!authorization)
@@ -53,6 +61,15 @@ function safefy(callback, validateToken,exception) {
                 const account = await verify_token(authorization)
                 if (!account)  ThrowReturn.create('wrong token || permission denied').error_code(-1000)
                 req.account=account;
+
+                // const key = req.route.path.split('/')[1];
+                // console.log('000000000000000000000000000')
+                // const value=await redis_pool[0].get(key);
+                // console.log(value,'11111111111111111111111111')
+                // if(value!==null) {
+                //     return res.json(JSON.parse(value));
+                // }
+
                 return  callback(req, res, ...arg);
             } catch (err) {
                 if(exception) exception(req, res,err)
@@ -72,7 +89,7 @@ function safefy(callback, validateToken,exception) {
 function Router(...args) {
     let router = express.Router(...args);
 
-    router.postS = function (filename, path, callback, validateToken = true,exception=process_exception) {
+    router.postS = function (filename, path, callback, validateToken = true,exception=process_exception,) {
         // let paths = filename.split('/')
         // let currentPath = []
 
@@ -96,6 +113,14 @@ function Router(...args) {
         // })
         this.post(path, safefy(callback, validateToken,exception));
     }
+
+    router.getS=function (filename,path,callback,validateToken=true,exception=process_exception){
+
+        this.get(path,safefy(callback,validateToken,exception))
+    }
+
+
+
     //add db to router
     router.db = db;
 
@@ -105,7 +130,7 @@ function Router(...args) {
     router.models = db.models;
 
     //add redis pool to router
-    // router.redispool = redispool;
+    router.redispool = redispool;
 
     //add logger to router
     router.logger = logger;

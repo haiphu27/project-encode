@@ -1,26 +1,30 @@
 const redis = require('redis');
-const config=require('../../config/setting');
 const bluebird = require('bluebird');
+const config = require('../../config/setting');
 
 bluebird.promisifyAll(redis.RedisClient.prototype);
 bluebird.promisifyAll(redis.Multi.prototype);
 
-class RedisPool{
+class RedisPool {
 
-    static init(configRedis){
+    static getMaxConnections(){
+        return this.maxConnections
+    }
 
-        this.maxConnections=configRedis.maxConnections
+    static async init(configRedis=undefined) {
+
+        this.maxConnections = configRedis.maxConnections
 
         //khởi tạo pool biến tổng số max kết nối thành mảng full phần tử null tương ứng
         //lặp hết tất cả phần tử mỗi phần tử là 1 kết nối
-        this.pool=Array(config.maxConnections)
+        this.pool = Array(configRedis.maxConnections)
             .fill(null)
-            .map(()=>redis.createClient(configRedis))
+            .map(() => redis.createClient(configRedis))
 
+        //list chờ tác vụ redis client
         this.waitingTasks=[];
 
         // thêm 1 số tính năng hữu ích vào redis client
-
         this.pool.forEach(rd=>{
 
             //if don't key ,defaultValue=0
@@ -38,22 +42,50 @@ class RedisPool{
                 return await rd.getAsync(key)
                     .then(value => value?JSON.parse(value):defaultValue)
             }
+
+            rd.release=function(){
+                RedisPool.release(rd)
+            }
+
         })
 
-        let a =Object.getOwnPropertyNames(redis.RedisClient.prototype)
-        console.log(a)
-
-
-
-
-
-
+        // Object
+        //     .getOwnPropertyNames(redis.RedisClient.prototype)
+        //     .filter(name => name.endsWith('Async'))
+        //     .forEach(name => {
+        //         // this[name] = (...args) => this.command(name, ...args);
+        //     });
+        return this;
     }
 
+    //đợi và bật kết nối
+    static getClient(msAutoRelease=500){
+        return new Promise(resolve => {
+            if(this.pool.length){
+               let rd= this.pool.pop();
 
+            }else {
+                this.waitingTasks.push({resolve, msAutoRelease})
+            }
+        })
+    }
 
+    static release(RedisClient){
+        if(this.pool.includes(RedisClient)) return;
+        if(!this.waitingTasks.length){
+            this.waitingTasks.push(RedisClient)
+            return
+        }
+        let {resolve,msAutoRelease}=this.waitingTasks.pop();
+        resolve(RedisClient)
+        if(msAutoRelease){
+            setTimeout(()=>{
+                this.release(RedisClient)
+            },msAutoRelease)
+        }
+    }
 }
 
- RedisPool.init(config.redis)
+RedisPool.init(config.redis)
 
-module.exports=RedisPool
+module.exports = RedisPool

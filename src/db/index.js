@@ -18,10 +18,9 @@ class Database {
 
         this.converter = config.model_converter
 
-        this.loadModels()
+        this.loadModels();
 
         this.createModelsAssociations();
-
     }
 
     static loadModels() {
@@ -33,8 +32,9 @@ class Database {
         modelFileNames.forEach(filesName => {
             let model = this.sequelize.import(filesName);
 
-             let modelName =  model.modalNameAlias?model.modalNameAlias:this.convertModelName(model.name);
-           this.models[modelName] = model;
+            let modelName =  model.modalNameAlias?model.modalNameAlias:this.convertModelName(model.name);
+
+            this.models[modelName] = model;
            // sequelizePaginate.paginate(model);
         })
     }
