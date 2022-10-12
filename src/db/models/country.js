@@ -1,7 +1,6 @@
-module.exports= (sequelize,DataTypes) => {
-
+module.exports = (sequelize,DataTypes) => {
         return sequelize.define('country',{
-            id: {
+            id_country: {
                 type: DataTypes.INTEGER,
                 autoIncrement: true,
                 primaryKey: true,

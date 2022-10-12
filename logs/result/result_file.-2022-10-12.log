@@ -1,0 +1,471 @@
+[2022-10-12T07:58:35.499] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T08:00:01.069] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T08:04:52.482] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T08:05:30.917] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T08:05:57.211] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T08:18:14.577] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T08:35:34.950] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T08:52:09.262] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T08:52:51.166] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T09:08:18.140] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T09:14:30.390] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T09:16:10.504] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T09:19:48.744] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T09:26:09.235] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T09:31:32.173] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T09:31:38.295] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T09:31:39.772] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T09:31:40.716] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T09:31:42.169] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T09:31:43.258] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T09:32:08.316] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T09:45:42.015] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T09:46:15.086] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T09:48:09.354] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T09:50:54.941] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T09:52:02.273] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T09:52:36.990] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T09:54:35.561] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T09:54:41.855] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T09:56:51.030] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T09:56:56.567] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T09:57:13.890] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T09:58:56.683] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T09:59:17.151] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T09:59:49.665] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T10:00:33.820] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T10:02:01.166] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T10:02:27.904] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T10:03:01.235] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T10:03:13.817] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T10:04:55.413] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T10:05:11.254] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T10:08:49.277] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T10:09:25.950] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T10:10:07.999] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T10:15:44.134] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T10:17:25.391] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T10:19:09.096] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T10:19:17.593] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T10:19:51.701] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T10:19:58.462] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T10:21:06.285] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T10:23:57.758] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T10:24:45.303] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T10:25:33.779] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T10:26:07.182] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T10:26:44.489] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T10:28:09.111] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T10:37:18.674] [INFO] default - static files /api -> ./src/routes
+[2022-10-12T10:37:18.675] [INFO] default - static files /static/uploads/ -> ./uploads/
+[2022-10-12T11:04:44.147] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T11:04:44.149] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T11:05:08.511] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T11:05:08.513] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T11:05:38.666] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T11:05:38.668] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T11:10:24.581] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T11:10:24.584] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T11:14:49.404] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T11:14:49.406] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T11:19:13.604] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T11:19:13.606] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T11:19:39.496] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T11:19:39.497] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T11:19:50.625] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T11:19:50.626] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T11:21:42.568] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T11:21:42.569] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T11:21:55.930] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T11:21:55.932] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T11:22:10.379] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T11:22:10.380] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T11:23:08.450] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T11:23:08.451] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T11:23:29.527] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T11:23:29.528] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T11:25:13.665] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T11:25:13.666] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T11:25:50.074] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T11:25:50.075] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T11:31:31.009] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T11:31:31.011] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T11:32:07.658] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T11:32:07.659] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T11:34:41.116] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T11:34:41.118] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T11:37:35.183] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T11:37:35.185] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T11:39:18.515] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T11:39:18.517] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T11:41:11.401] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T11:41:11.403] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T11:45:41.246] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T11:45:41.247] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T11:46:06.362] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T11:46:06.363] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T11:46:16.327] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T11:46:16.328] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T11:46:19.232] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T11:46:19.233] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T11:46:54.371] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T11:46:54.372] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T11:47:12.146] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T11:47:12.147] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T11:49:50.361] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T11:49:50.362] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T11:51:41.108] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T11:51:41.110] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T11:53:20.699] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T11:53:20.700] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T11:54:15.453] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T11:54:15.455] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T13:42:01.858] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T13:42:01.860] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T13:52:09.326] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T13:52:09.328] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T13:54:51.397] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T13:54:51.398] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T14:15:27.372] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T14:15:27.374] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T14:39:39.057] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T14:39:39.059] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T14:40:19.911] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T14:40:19.913] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T14:41:02.507] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T14:41:02.509] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T14:41:16.633] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T14:41:16.635] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T14:41:39.126] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T14:41:39.127] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T14:41:41.238] [INFO] default - ::1 - - "POST /api/user/login HTTP/1.1" 404 154 "" "PostmanRuntime/7.29.2"
+[2022-10-12T14:42:13.370] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T14:42:13.371] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T14:42:26.585] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T14:42:26.586] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T14:42:27.757] [INFO] default - ::1 - - "POST /api/user/login HTTP/1.1" 404 154 "" "PostmanRuntime/7.29.2"
+[2022-10-12T14:42:50.209] [INFO] default - ::1 - - "POST /api/user/login HTTP/1.1" 404 154 "" "PostmanRuntime/7.29.2"
+[2022-10-12T14:43:22.153] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T14:43:22.155] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T14:43:24.188] [INFO] default - ::1 - - "POST /api/user/login HTTP/1.1" 404 154 "" "PostmanRuntime/7.29.2"
+[2022-10-12T14:43:25.884] [INFO] default - ::1 - - "POST /api/user/login HTTP/1.1" 404 154 "" "PostmanRuntime/7.29.2"
+[2022-10-12T14:44:00.466] [INFO] default - ::1 - - "POST /api/user/login HTTP/1.1" 404 154 "" "PostmanRuntime/7.29.2"
+[2022-10-12T14:44:14.869] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T14:44:14.871] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T14:44:18.625] [INFO] default - ::1 - - "POST /api/user/login HTTP/1.1" 404 154 "" "PostmanRuntime/7.29.2"
+[2022-10-12T14:45:12.995] [INFO] default - ::1 - - "POST /api/user/login HTTP/1.1" 404 154 "" "PostmanRuntime/7.29.2"
+[2022-10-12T14:46:26.480] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T14:46:26.482] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T14:46:29.112] [INFO] default - ::1 - - "POST /api/user/login HTTP/1.1" 404 154 "" "PostmanRuntime/7.29.2"
+[2022-10-12T14:49:32.532] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T14:49:32.533] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T14:49:33.597] [INFO] default - ::1 - - "POST /api/user/login HTTP/1.1" 404 154 "" "PostmanRuntime/7.29.2"
+[2022-10-12T14:49:39.382] [INFO] default - ::1 - - "POST /api/user/login HTTP/1.1" 404 154 "" "PostmanRuntime/7.29.2"
+[2022-10-12T14:49:41.796] [INFO] default - ::1 - - "POST /api/user/login HTTP/1.1" 404 154 "" "PostmanRuntime/7.29.2"
+[2022-10-12T14:49:43.627] [INFO] default - ::1 - - "POST /api/user/login HTTP/1.1" 404 154 "" "PostmanRuntime/7.29.2"
+[2022-10-12T14:49:58.226] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T14:49:58.228] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T14:50:05.298] [INFO] default - ::1 - - "POST /api/user/login HTTP/1.1" 404 154 "" "PostmanRuntime/7.29.2"
+[2022-10-12T14:50:57.464] [INFO] default - ::1 - - "POST /api/user/login HTTP/1.1" 404 154 "" "PostmanRuntime/7.29.2"
+[2022-10-12T14:51:30.992] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T14:51:30.994] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T14:51:32.581] [INFO] default - ::1 - - "POST /api/user/login HTTP/1.1" 404 154 "" "PostmanRuntime/7.29.2"
+[2022-10-12T14:51:41.507] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T14:51:41.509] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T14:51:51.537] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T14:51:51.539] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T14:51:54.334] [INFO] default - ::1 - - "POST /api/user/login HTTP/1.1" 404 154 "" "PostmanRuntime/7.29.2"
+[2022-10-12T14:52:28.541] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T14:52:28.547] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T14:52:56.315] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T14:52:56.317] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T14:53:21.500] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T14:53:21.502] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T14:53:58.787] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T14:53:58.788] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T14:55:32.649] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T14:55:32.650] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T14:56:08.342] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T14:56:08.344] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T14:57:29.799] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T14:57:29.801] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T14:58:13.971] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T14:58:13.972] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T14:58:41.544] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T14:58:41.545] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T14:59:20.580] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T14:59:20.582] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T14:59:45.549] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T14:59:45.551] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T15:00:20.678] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T15:00:20.680] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T15:00:22.190] [INFO] default - ::1 - - "POST /api/user/login HTTP/1.1" 200 152 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:01:40.657] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T15:01:40.659] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T15:01:54.730] [INFO] default - ::1 - - "POST /api/user/register HTTP/1.1" 200 29 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:02:01.307] [INFO] default - ::1 - - "POST /api/user/login HTTP/1.1" 200 152 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:02:26.649] [INFO] default - ::1 - - "GET /api/user/list HTTP/1.1" 404 152 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:02:29.970] [INFO] default - ::1 - - "GET /api/user/list HTTP/1.1" 404 152 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:02:48.149] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:05:32.222] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T15:05:32.224] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T15:05:39.094] [INFO] default - ::1 - - "POST /api/user/register HTTP/1.1" 200 29 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:06:19.661] [INFO] default - ::1 - - "POST /api/user/login HTTP/1.1" 200 152 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:06:31.665] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:07:05.508] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T15:07:05.509] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T15:07:18.677] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:08:19.073] [INFO] default - ::1 - - "POST /api/user/login HTTP/1.1" 200 152 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:09:00.879] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T15:09:00.881] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T15:09:03.403] [INFO] default - ::1 - - "POST /api/user/login HTTP/1.1" 200 152 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:10:40.738] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T15:10:40.739] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T15:10:42.879] [INFO] default - ::1 - - "POST /api/user/login HTTP/1.1" 200 152 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:12:05.301] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T15:12:05.302] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T15:12:07.714] [INFO] default - ::1 - - "POST /api/user/login HTTP/1.1" 200 152 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:14:11.876] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T15:14:11.878] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T15:15:44.524] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T15:15:44.525] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T15:15:47.110] [INFO] default - ::1 - - "POST /api/user/login HTTP/1.1" 200 152 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:17:49.805] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T15:17:49.807] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T15:19:14.774] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T15:19:14.776] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T15:23:47.731] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T15:23:47.732] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T15:25:36.957] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T15:25:36.958] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T15:26:06.605] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T15:26:06.606] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T15:27:32.534] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T15:27:32.535] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T15:28:19.110] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T15:28:19.111] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T15:28:46.091] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T15:28:46.093] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T15:30:49.561] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T15:30:49.562] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T15:31:29.300] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T15:31:29.301] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T15:31:50.760] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T15:31:50.763] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T15:36:53.482] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T15:36:53.484] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T15:37:47.606] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T15:37:47.608] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T15:38:18.731] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T15:38:18.732] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T15:38:27.074] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T15:38:27.075] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T15:38:51.852] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T15:38:51.854] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T15:38:53.828] [INFO] default - ::1 - - "POST /api/user/login HTTP/1.1" 200 152 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:39:14.921] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T15:39:14.922] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T15:39:22.016] [INFO] default - ::1 - - "POST /api/user/login HTTP/1.1" 200 152 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:39:56.726] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T15:39:56.728] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T15:40:00.917] [INFO] default - ::1 - - "POST /api/user/login HTTP/1.1" 200 152 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:40:07.958] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T15:40:07.960] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T15:40:09.705] [INFO] default - ::1 - - "POST /api/user/login HTTP/1.1" 200 152 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:55:17.446] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T15:55:17.447] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T15:55:23.551] [INFO] default - ::1 - - "POST /api/user/login HTTP/1.1" 200 152 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:55:32.876] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:55:34.152] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:55:34.927] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:55:35.586] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:55:36.394] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:55:37.108] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:55:37.855] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:55:38.670] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:55:39.462] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:55:40.176] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:56:04.793] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T15:56:04.795] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T15:56:07.258] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:56:10.192] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:56:11.192] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:56:12.905] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:56:15.046] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:56:15.706] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:56:22.753] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:56:23.908] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:56:25.115] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:56:26.128] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:56:29.721] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T15:56:29.722] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T15:56:32.196] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:56:34.283] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:56:35.345] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:56:36.238] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:56:37.022] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:56:37.889] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:56:39.276] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:56:40.164] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:56:40.899] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:56:41.617] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:56:42.239] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:56:42.909] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:56:43.637] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:56:44.328] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:56:45.101] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:56:45.788] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:56:46.492] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:56:47.191] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:56:47.878] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:56:48.547] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:56:49.291] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:56:53.358] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T15:56:53.360] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T15:56:56.212] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:56:57.328] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:56:58.229] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:56:58.991] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:56:59.694] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:57:00.490] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:57:01.257] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:57:01.982] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:57:02.760] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:57:03.723] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:57:04.915] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:57:05.769] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:57:06.551] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:57:07.313] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:57:08.276] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T15:57:09.127] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T16:01:23.556] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T16:01:23.557] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T16:01:25.525] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T16:01:25.527] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T16:01:44.933] [INFO] default - ::1 - - "POST /api/account/login HTTP/1.1" 200 152 "" "PostmanRuntime/7.29.2"
+[2022-10-12T16:02:22.237] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T16:02:22.238] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T16:04:10.087] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T16:04:10.089] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T16:04:35.214] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T16:04:35.216] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T16:15:41.430] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T16:15:41.432] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T16:19:11.268] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T16:19:11.270] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T16:21:13.349] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T16:21:13.350] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T16:21:47.740] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T16:21:47.741] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T16:22:03.643] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T16:22:03.644] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T16:22:05.271] [INFO] default - ::1 - - "POST /api/account/login HTTP/1.1" 200 174 "" "PostmanRuntime/7.29.2"
+[2022-10-12T16:23:02.106] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T16:23:02.107] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T16:23:06.695] [INFO] default - ::1 - - "POST /api/account/login HTTP/1.1" 200 174 "" "PostmanRuntime/7.29.2"
+[2022-10-12T16:29:29.537] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T16:29:29.538] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T16:30:32.231] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T16:30:32.233] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T16:30:34.934] [INFO] default - undefined - - "POST /api/account/login HTTP/1.1" 200 - "" "PostmanRuntime/7.29.2"
+[2022-10-12T16:31:00.064] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T16:31:00.065] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T16:31:04.402] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T16:31:04.404] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T16:31:23.335] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T16:31:23.336] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T16:31:35.678] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T16:31:35.679] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T16:31:37.708] [INFO] default - ::1 - - "POST /api/account/login HTTP/1.1" 200 174 "" "PostmanRuntime/7.29.2"
+[2022-10-12T16:31:59.728] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T16:31:59.729] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T16:32:48.329] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T16:32:48.331] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T16:32:50.272] [INFO] default - ::1 - - "POST /api/account/login HTTP/1.1" 200 174 "" "PostmanRuntime/7.29.2"
+[2022-10-12T16:34:29.988] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T16:34:29.990] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T16:38:23.562] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T16:38:23.564] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T16:38:33.488] [INFO] default - ::1 - - "POST /api/account/login HTTP/1.1" 200 174 "" "PostmanRuntime/7.29.2"
+[2022-10-12T16:42:37.054] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T16:42:37.056] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T16:48:33.296] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T16:48:33.298] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T16:48:38.569] [INFO] default - ::1 - - "POST /api/account/register HTTP/1.1" 200 37 "" "PostmanRuntime/7.29.2"
+[2022-10-12T16:50:04.508] [INFO] default - undefined - - "POST /api/account/register HTTP/1.1" 200 - "" "PostmanRuntime/7.29.2"
+[2022-10-12T16:50:20.408] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T16:50:20.410] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T16:51:21.983] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T16:51:21.985] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T16:51:50.525] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T16:51:50.526] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T16:53:26.122] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T16:53:26.124] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T16:53:28.535] [INFO] default - ::1 - - "POST /api/account/register HTTP/1.1" 200 29 "" "PostmanRuntime/7.29.2"
+[2022-10-12T16:58:25.933] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T16:58:25.935] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T16:58:30.269] [INFO] default - ::1 - - "POST /api/account/register HTTP/1.1" 200 29 "" "PostmanRuntime/7.29.2"
+[2022-10-12T16:59:04.967] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T16:59:04.968] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T16:59:38.699] [INFO] default - ::1 - - "POST /api/account/register HTTP/1.1" 200 29 "" "PostmanRuntime/7.29.2"
+[2022-10-12T17:04:52.254] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T17:04:52.256] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T17:08:52.145] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T17:08:52.147] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T17:18:51.138] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T17:18:51.139] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T17:18:55.614] [INFO] default - ::1 - - "POST /api/account/login HTTP/1.1" 200 174 "" "PostmanRuntime/7.29.2"
+[2022-10-12T17:19:05.881] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T17:21:13.588] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T17:21:13.589] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T17:21:40.945] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T17:21:40.947] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T17:21:45.769] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T17:21:45.770] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T17:21:47.404] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T17:21:49.623] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T17:21:50.814] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T17:22:16.089] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T17:22:16.091] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T17:22:24.641] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T17:22:24.642] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T17:22:40.609] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T17:22:40.610] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T17:22:42.213] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T17:22:49.058] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T17:22:50.689] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T17:22:51.630] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T17:22:52.306] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T17:22:53.079] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T17:22:53.780] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T17:22:54.444] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T17:22:55.157] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T17:22:55.926] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T17:22:56.630] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T17:26:52.374] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T17:26:52.382] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T17:27:04.814] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T17:27:04.816] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T17:27:08.891] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T17:27:08.893] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T17:27:11.482] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 100 "" "PostmanRuntime/7.29.2"
+[2022-10-12T17:27:28.629] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T17:27:28.631] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T17:27:30.869] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 - "" "PostmanRuntime/7.29.2"
+[2022-10-12T17:27:55.507] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T17:27:55.508] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T17:27:56.866] [INFO] default - ::1 - - "GET /api/country/list HTTP/1.1" 200 - "" "PostmanRuntime/7.29.2"
+[2022-10-12T17:28:22.374] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T17:28:22.376] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T17:28:27.152] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T17:28:27.154] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T17:28:53.223] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T17:28:53.225] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T17:29:05.019] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T17:29:05.021] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T17:30:02.877] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T17:30:02.878] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T17:30:19.510] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T17:30:19.512] [INFO] default - static files /static/videos/ -> ./public
+[2022-10-12T17:30:43.675] [INFO] default - static files /static/uploads/ -> ./uploads
+[2022-10-12T17:30:43.677] [INFO] default - static files /static/videos/ -> ./public
