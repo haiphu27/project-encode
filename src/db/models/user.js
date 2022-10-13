@@ -1,5 +1,5 @@
 module.exports = (sequelize,DataTypes) => {
-    const user = sequelize.define('user', {
+    const User = sequelize.define('user', {
         id_user: {
             type: DataTypes.INTEGER(11),
             autoIncrement: true,
@@ -30,14 +30,14 @@ module.exports = (sequelize,DataTypes) => {
         tableName: 'user'
     })
 
-    // user.associate = (models) => {
-    //     user.belongsToMany(models.country, {
+    // User.associate = (models) => {
+    //     User.belongsToMany(models.country, {
     //         as: 'country',
     //         foreignKey: 'id_country',
     //     });
     // }
 
-    return user
+    return User;
 }
 
 
