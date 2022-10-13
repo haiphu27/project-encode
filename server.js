@@ -4,13 +4,15 @@ const cors = require("cors");
 require('dotenv').config()
 const helmet = require('helmet')
 const xss = require('xss-clean')
-const logg = require('morgan')
 const path = require('path')
 const rateLimit = require("express-rate-limit");
 const {logger} = require('./src/util/logger')
 const log4js = require('log4js')
 const fs = require("fs");
 const {http} = require("./config/setting");
+const upload = require('./src/modules/uploadMulter')
+
+const Resize = require('./src/modules/Resize')
 
 function load_router(app, baseUri, folder) {
     let routerFolder = path.join(__dirname, folder)
@@ -50,6 +52,7 @@ app.use(cors())
 app.use(helmet())
 app.use(xss())
 
+
 function logResponseBody(req, res, next) {
     const oldWrite = res.write
     const oldEnd = res.end;
@@ -71,12 +74,27 @@ function logResponseBody(req, res, next) {
 }
 
 
-
 //rate limit (max 60 request per 60 minutes)
-const rate_limit = rateLimit({
+const limiter  = rateLimit({
     windowMs: 60 * 60 * 1000, // 60 minutes
     max: 60, // limit each IP to 100 requests per windowMs
-    message: "Too many requests from this IP, please try again after an hour"
+    message: "Too many requests from this IP, please try again after 60 minutes"
+})
+app.use('/api/account/login',limiter )
+
+
+app.post('/api/public/post-img', upload.single('image'), async function (req, res) {
+
+    //folder chứa upload
+    const pathname = path.join(__dirname, '/uploads/img')
+    //class Resize
+    const resizeUpload = new Resize(pathname)
+    if(!req.file) return res.status(401).json({error:'please provide a img'})
+    const filename = await resizeUpload.save(req.file.buffer, req.file.originalname)
+
+    return res.status(200).json({
+        path:`http://localhost:3000/static/uploads/img/${filename}`
+    })
 })
 
 app.use(
@@ -88,11 +106,10 @@ app.use(
 //ghi log...
 app.use(logResponseBody);
 
-
 //static file
 Object.values(http.static).forEach(({baseUri, folder}) => {
     logger.info(`static files`, baseUri, '->', folder);
-    app.use(baseUri, express.static(path.join(__dirname, folder)));
+    app.use(baseUri,express.static(path.join(__dirname, folder)));
 })
 
 //load_router
