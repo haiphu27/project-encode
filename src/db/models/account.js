@@ -1,5 +1,5 @@
 module.exports = (sequelize,DataTypes) => {
-    const User = sequelize.define('user', {
+    const User = sequelize.define('account', {
         id_user: {
             type: DataTypes.INTEGER(11),
             autoIncrement: true,
@@ -27,7 +27,7 @@ module.exports = (sequelize,DataTypes) => {
         }
     }, {
         timestamps: false,
-        tableName: 'user'
+        tableName: 'account'
     })
 
     // User.associate = (models) => {
