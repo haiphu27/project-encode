@@ -4,7 +4,7 @@ const {secret_jwt}=require('../../config/setting')
 const bcrypt = require("bcrypt");
 
 async function find_account({username}){
-    const account = await models.user.findOne({
+    const account = await models.account.findOne({
         where: {username},
         raw: true
     })
