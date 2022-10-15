@@ -56,7 +56,7 @@ function get_price_ship(product, callback = null, callError = null) {
     }, 0, viettel_post_user_data.token)
 }
 
-module.exports.viettel_post_get_price = function (product, callback = null, callError = null) {
+module.exports.viettel_post_get_price_ship = function (product, callback = null, callError = null) {
     if (!viettel_post_user_data || !viettel_post_user_data.token) {
         viettel_post_login(() => {
             get_price_ship(product, callback, callError)
@@ -172,7 +172,7 @@ module.exports.viettel_post_register_store_inventory=function (callback=null,cal
 
 
 //các bảng giá dịch vụ
-function get_price_all(body,callback=null,callError){
+function get_price_all(body,callback=null,callError=null){
     const url="https://partner.viettelpost.vn/v2/order/getPriceAll"
 
     network.httpRequestPost(url, (jsonData)=>{
@@ -193,7 +193,9 @@ function get_price_all(body,callback=null,callError){
                 if(callError) callError(message)
             }
         }
-    },body,()=>{}, 0,viettel_post_user_data.token)
+    },body,()=>{
+        if(callError) callError('không lấy được dữ liệu')
+    }, 0,viettel_post_user_data.token)
 }
 
 module.exports.viettel_post_get_price_all= function (body,callback = null, callError = null){

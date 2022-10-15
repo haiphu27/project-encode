@@ -15,9 +15,8 @@ function header(Authorization = '', shop_id = 0) {
 module.exports.httpRequestGet = function (url,
                                           callback,
                                           callError = null,
-                                          Authorization='',
-                                          shop_id=0)
-{
+                                          Authorization = '',
+                                          shop_id = 0) {
     let didTimeout = false;
 
     new Promise(function (resolve, reject) {
@@ -30,65 +29,71 @@ module.exports.httpRequestGet = function (url,
         }, 60000)
 
         fetch(url, {
-            headers: header(Authorization,shop_id),
-            method:'GET'
-        }).then(function (response){return response.json()})
-            .then(function (response){
+            headers: header(Authorization, shop_id),
+            method: 'GET'
+        }).then(function (response) {
+            return response.json()
+        })
+            .then(function (response) {
                 // Clear the timeout as cleanup
-                  clearTimeout(timeout);
-                  if(!didTimeout) {resolve(response)}
+                clearTimeout(timeout);
+                if (!didTimeout) {
+                    resolve(response)
+                }
             })
-            .catch(function (error){
-                if(didTimeout)return;
+            .catch(function (error) {
+                if (didTimeout) return;
                 reject(error)
             })
     })
         .then(function (response) {
-            if(callback) callback(response)
+            if (callback) callback(response)
         })
         .catch(function (error) {
-            if(callError) callError()
+            if (callError) callError()
         })
 }
 
 //xd tương tự với method Post
 
-module.exports.httpRequestPost = function httpRequestPost( url,
+module.exports.httpRequestPost = function httpRequestPost(url,
                                                           callback,
                                                           formData,
-                                                          callError=null,
-                                                          time_out=0,
-                                                          Authorization='',
-                                                          shop_id=0) {
-    let disTimeout=false;
-    new Promise(function (resolve,reject) {
-        const timeout = setTimeout(()=>{
+                                                          callError = null,
+                                                          time_out = 0,
+                                                          Authorization = '',
+                                                          shop_id = 0) {
+    let disTimeout = false;
+    new Promise(function (resolve, reject) {
+
+        const timeout = setTimeout(() => {
             disTimeout = true;
             try {
                 reject('response timeout')
-            }catch (e) {}
-        },time_out?time_out:60000)
+            } catch (e) {
+            }
+        }, time_out ? time_out : 60000)
 
-        fetch(url,{
-            headers:header(Authorization, shop_id),
-            body:JSON.stringify(formData),
-            method:"POST",
-            cache:"no-cache"
+        fetch(url, {
+            headers: header(Authorization, shop_id),
+            body: JSON.stringify(formData),
+            method: "POST",
+            cache: "no-cache"
         })
-            .then(res=>res.json())
-            .then(res=>{
+            .then(res => res.json())
+            .then(res => {
                 clearTimeout(timeout)
-                if(!disTimeout) resolve(res)
+                if (!disTimeout) resolve(res)
             })
-            .catch(err=>{
-                if(disTimeout) return
+            .catch(err => {
+                if (disTimeout) return
                 reject(err)
             })
-    }).then(res=>{
-        if(callback) callback(res)
+    }).then(res => {
+        if (callback) callback(res)
     })
-       .catch(err=>{
-        if(callError) callError()
+        .catch(err => {
+            if (callError) callError()
         })
 }
 
