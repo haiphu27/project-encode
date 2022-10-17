@@ -1,6 +1,7 @@
 const router = require('../core/router').Router()
 const viettel_post_ultil = require('../util/viettel_post_ultil')
 const mysqlpool = require('../util/mysqlpool')
+const {ghn_get_all_service} = require("../util/ghn_post_api_utils");
 
 async function get_price_all_service_for_cms(req, res) {
     const {golfer_address, method_payment_id, products} = req.body;
@@ -58,12 +59,14 @@ async function get_price_all_service_for_cms(req, res) {
         let array = [];
 
         if (method_payment_id === 1) {
+            //cod
             for (let d of data) {
                 if (d.MA_DV_CHINH === "ECOD" || d.MA_DV_CHINH === "ECOD") {
                     array.push(d)
                 }
             }
         } else if (method_payment_id === 2) {
+            //chuyen khoan
             for (let d of data) {
                 if (d.MA_DV_CHINH !== "ECOD" || d.MA_DV_CHINH !== "ECOD") {
                     array.push(d)
@@ -192,7 +195,7 @@ async function get_price_ship(req, res) {
     })
 }
 
-async function get_price_all_service_v2(req, res) {
+async function get_price_all_service(req, res) {
     let {
         golfer_address_id,
         method_payment_id,
@@ -200,13 +203,203 @@ async function get_price_all_service_v2(req, res) {
         orders
     } = req.body;
 
+    if (!golfer_address_id || !shop_address_id || !method_payment_id || !orders) {
+        return res.send({error: 1, msg: "chưa có thông tin sản phẩm"})
+    }
 
+    //thong tin van chuyen (nhan +gui)
+    let sql = ` select * from golfer_address where id in (${golfer_address_id},${shop_address_id})`
+    const [address] = await mysqlpool.query(sql)
+    const info_address_sender = address.map(add => add.id === golfer_address_id)
+    const info_address_receiver = address.map(add => add.id === shop_address_id)
 
+    //bill orders
+    sql = `select * from orders where id in (${orders.join(',')})`
+    const [row_order] = await mysqlpool.query(sql)
+    if (row_order && row_order.length > 0) {
+        let delivery_bill_id = row_order[0].delivery_bill_id
+    } else {
+        return res.send({msg: 'ko co don hang nao'})
+    }
+    // total price
+    let product_price = row_order.length > 1 ? row_order.map(d => d.total_price).reduce((value1, value2) => value1 + value2) : row_order[0].total_price
+    //cod
+    let money_collection = method_payment_id == 1 ? product_price : 0;
+
+    //total weight product
+    const product_ids = row_order.map(ord => ord.product_id)
+    sql = `select weight from product where id in (${product_ids.join(',')})`
+    let [weights] = await mysqlpool.query(sql)
+    let weight = weights && weights.length > 0 ? weights.map(w => w.weight) : []
+    const total_weight = !weight.length ? 0 : (weight.length > 1 ? weight.reduce((value1, value2) => value1 + value2) : weight[0])
+
+    let product = {
+        "SENDER_PROVINCE": info_address_sender.city_viettel_post_id,
+        "SENDER_DISTRICT": info_address_sender.district_viettel_post_id,
+        "RECEIVER_PROVINCE": golfer_address.city_viettel_post_id,
+        "RECEIVER_DISTRICT": golfer_address.district_viettel_post_id,
+        "PRODUCT_TYPE": "HH",
+        "PRODUCT_WEIGHT": weight,
+        "PRODUCT_PRICE": product_price,
+        "MONEY_COLLECTION": money_collection,
+    }
+
+    viettel_post_ultil.viettel_post_get_price_all(product, async (data) => {
+
+        data.forEach(d => {
+            if (d.MA_DV_CHINH === "LCOD") d.TEN_DICHVU = 'Chuyển phát thường'
+            if (d.MA_DV_CHINH === "NCOD") d.TEN_DICHVU = 'Chuyển phát nhanh'
+            if (d.MA_DV_CHINH === "VTK") d.TEN_DICHVU = 'Chuyển phát thường'
+        })
+
+        //tạm bỏ hỏa tốc với chuyển trong ngày
+        let index = data.findIndex(d => d.MA_DV_CHINH === "ECOD")
+        data.splice(index, 1)
+
+        index = data.findIndex(d => d.MA_DV_CHINH === "VO2")
+        data.splice(index, 1)
+
+        index = data.findIndex(d => d.MA_DV_CHINH === "PTN")
+        data.splice(index, 1)
+
+        let array = [];
+
+        if (method_payment_id === 1) {
+            data.forEach(d => {
+                if (d.MA_DV_CHINH === "LCOD" || d.MA_DV_CHINH === "NCOD") {
+                    array.push(d)
+                }
+            })
+        } else if (method_payment_id === 2) {
+            data.forEach(d => {
+                if (d.MA_DV_CHINH !== "LCOD" || d.MA_DV_CHINH !== "NCOD") {
+                    array.push(d)
+                }
+            })
+        } else {
+            array = [...data]
+        }
+        res.send({error: 0, info: array})
+
+    }, (msg) => {
+        res.send({error: 1, msg: msg});
+    })
 }
 
+async function get_price_all_service_v2(req, res) {
+
+    let {
+        golfer_address_id,
+        method_payment_id,
+        shop_address_id,
+        orders
+    } = req.body;
+    let {version} = req.query
+    version = parseInt(version) || 1
+
+    if (!golfer_address_id || !shop_address_id || !method_payment_id || !orders) {
+        return res.send({error: 1, msg: "chưa có thông tin sản phẩm"})
+    }
+
+    //bill orders
+    sql = `select * from orders where id in (${orders.join(',')})`
+    const [row_order] = await mysqlpool.query(sql)
+    let delivery_bill_id = 0;
+    if (row_order && row_order.length > 0) {
+        delivery_bill_id = row_order[0].delivery_bill_id
+    } else {
+        return res.send({msg: 'ko co don hang nao'})
+    }
+
+    // total price
+    let product_price = row_order.length > 1 ? row_order.map(d => d.total_price).reduce((value1, value2) => value1 + value2) : row_order[0].total_price
+
+
+     //////////////DIEU HUONG//////////////////////////////////
+    //version mới nhất để check điều hướng sang ghn
+    if (product_price < 5000000 && version === 3) {
+        let sql=`update delivery_bill set cod_id=2 where id='${delivery_bill_id}'`
+        await mysqlpool.query(sql)
+        return ghn_get_all_service(req, res)
+    }
+    /////////////////////////////////////////////
+    ////////////////////////////////////////////
+
+
+
+
+    //thong tin van chuyen (nhan +gui)
+    let sql = ` select * from golfer_address where id in (${golfer_address_id},${shop_address_id})`
+    const [address] = await mysqlpool.query(sql)
+    const info_address_sender=address.find(d=>d.id===shop_address_id)
+    const info_address_receiver=address.find(d=>d.id===golfer_address_id)
+
+    //cod
+    let money_collection = method_payment_id == 1 ? product_price : 0;
+
+    //total weight product
+    const product_ids = row_order.map(ord => ord.product_id)
+    sql = `select weight from product where id in (${product_ids.join(',')})`
+    let [weights] = await mysqlpool.query(sql)
+    let weight = weights && weights.length > 0 ? weights.map(w => w.weight) : []
+    const total_weight = !weight.length ? 0 : (weight.length > 1 ? weight.reduce((value1, value2) => value1 + value2) : weight[0])
+
+    let product = {
+        "SENDER_PROVINCE": info_address_sender.city_viettel_post_id,
+        "SENDER_DISTRICT": info_address_sender.district_viettel_post_id,
+        "RECEIVER_PROVINCE": info_address_receiver.city_viettel_post_id,
+        "RECEIVER_DISTRICT": info_address_receiver.district_viettel_post_id,
+        "PRODUCT_TYPE": "HH",
+        "PRODUCT_WEIGHT": weight,
+        "PRODUCT_PRICE": product_price,
+        "MONEY_COLLECTION": money_collection,
+    }
+
+    viettel_post_ultil.viettel_post_get_price_all(product, async (data) => {
+
+        data.forEach(d => {
+            if (d.MA_DV_CHINH === "LCOD") d.TEN_DICHVU = 'Chuyển phát thường'
+            if (d.MA_DV_CHINH === "NCOD") d.TEN_DICHVU = 'Chuyển phát nhanh'
+            if (d.MA_DV_CHINH === "VTK") d.TEN_DICHVU = 'Chuyển phát thường'
+        })
+
+        //tạm bỏ hỏa tốc với chuyển trong ngày
+        let index = data.findIndex(d => d.MA_DV_CHINH === "ECOD")
+        data.splice(index, 1)
+
+        index = data.findIndex(d => d.MA_DV_CHINH === "VO2")
+        data.splice(index, 1)
+
+        index = data.findIndex(d => d.MA_DV_CHINH === "PTN")
+        data.splice(index, 1)
+
+        let array = [];
+
+        if (method_payment_id === 1) {
+            data.forEach(d => {
+                if (d.MA_DV_CHINH === "LCOD" || d.MA_DV_CHINH === "NCOD") {
+                    array.push(d)
+                }
+            })
+        } else if (method_payment_id === 2) {
+            data.forEach(d => {
+                if (d.MA_DV_CHINH !== "LCOD" || d.MA_DV_CHINH !== "NCOD") {
+                    array.push(d)
+                }
+            })
+        } else {
+            array = [...data]
+        }
+        res.send({error: 0, info: array})
+
+    }, (msg) => {
+        res.send({error: 1, msg: msg});
+    })
+}
 
 router.postS(__filename, '/get_price_all_service_for_cms', get_price_all_service_for_cms, true)
 router.postS(__filename, '/get_price_ship', get_price_ship, true)
+router.postS(__filename, '/get_price_all_service_v2', get_price_all_service, true)
 router.postS(__filename, '/get_price_all_service_v2', get_price_all_service_v2, true)
 
 module.exports = router;
