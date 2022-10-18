@@ -11,7 +11,6 @@ const log4js = require('log4js')
 const fs = require("fs");
 const {http} = require("./config/setting");
 const upload = require('./src/modules/uploadMulter')
-
 const Resize = require('./src/modules/Resize')
 
 function load_router(app, baseUri, folder) {

@@ -13,6 +13,6 @@ async function list_country(req, res, next) {
     }
 }
 
-router.getS(__filename, '/list', list_country, true)
+router.getSS(__filename, '/list', list_country, true)
 
 module.exports = router

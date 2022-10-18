@@ -104,7 +104,7 @@ function Router(...args) {
         this.post(path, safefy(callback, validateToken, exception,cache));
     }
 
-    router.getS = function (filename, path, callback, validateToken = true, exception = process_exception,cache = redis_cache) {
+    router.getSS = function (filename, path, callback, validateToken = true, exception = process_exception,cache = redis_cache) {
 
         this.get(path, safefy(callback, validateToken, exception,cache))
     }
