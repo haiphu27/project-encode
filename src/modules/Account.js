@@ -60,6 +60,7 @@ async function list({page, limit, username, phone, email}) {
     if( username|| phone || email){
         where=JSON.parse(JSON.stringify({username,phone,email}))
     }
+
     let customer=await models.Account.findAndCountAll({
         where,
         offset:(page-1)*limit,
@@ -72,37 +73,11 @@ async function list({page, limit, username, phone, email}) {
 
 async function get({id}){
     const customer = await models.account.findOne({
-        where: {
-            id
-        },
+        where: { id },
         raw: true
     })
     return customer;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 module.exports = {
     find,

@@ -42,6 +42,9 @@ function validate_username(username) {
     return pattern.test(String(username).toLowerCase())
 }
 
+function escape_null_querry(jdata) {
+    return JSON.parse(JSON.stringify(jdata))
+}
 
 
 module.exports = {
@@ -49,5 +52,5 @@ module.exports = {
     save_log_history,
     validate_username,
     validate_email,
-
+    escape_null_querry
 }
