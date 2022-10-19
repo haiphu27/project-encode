@@ -2,7 +2,7 @@ const router = require('../core/router').Router()
 const {modules}=require('../modules/index')
 const RedisPool = require("../util/redispool");
 
-async function list_country(req, res, next) {
+async function list_country(req, res) {
     try {
         const list_country = await modules.Country.list()
         const key = req.route.path.split('/')[1];

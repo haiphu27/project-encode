@@ -31,6 +31,7 @@ class RedisPool {
 
             this.getS = ultil.promisify(rd.get).bind(rd)
             this.setS = ultil.promisify(rd.set).bind(rd)
+            this.delS = ultil.promisify(rd.delete).bind(rd)
 
             //if don't key ,defaultValue=0
             // rd.getIntAsync=async function (key,defaultValue=0) {
