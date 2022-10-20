@@ -12,7 +12,7 @@ async function is_admin(account) {
     return false;
 }
 
-async function save_log_history(req, content = '', before_info = '') {
+async function save_log_history(req, title = '', before_info = '') {
     try {
         let ip = req.ip ? req.ip : '';
         let browser = req.headers['user-agent'] ? req.headers['user-agent'] : '';
@@ -22,10 +22,13 @@ async function save_log_history(req, content = '', before_info = '') {
             logger.info("ko co gi de luu")
             return;
         }
+
         let {username, id} = account;
-        let body = req.body ? JSON.stringify(req.body) : (req.query ? JSON.stringify(req.query) : '');
-        content=content.length ? content :body;
-        let sql=`insert into log_delivery_history(user_id,user_name,ip_request,content,name_browser,content_old)values(${id},'${username}','${ip}','${content}','${browser}','${before_info}')`
+
+        let body = Object.assign({}, req.body, req.query)
+        title = title.length ? title : JSON.stringify(body);
+
+        let sql = `insert into log_delivery_history(user_id,user_name,ip_request,content,name_browser,content_old)values(${id},'${username}','${ip}','${title}','${browser}','${before_info}')`
         await mysqlpool.query(sql);
     } catch (e) {
 
@@ -33,12 +36,12 @@ async function save_log_history(req, content = '', before_info = '') {
 }
 
 function validate_email(email) {
-    const pattern=/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const pattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return pattern.test(String(email).toLowerCase())
 }
 
 function validate_username(username) {
-    const pattern=/^([0-9a-zA-Z_]+)$/;
+    const pattern = /^([0-9a-zA-Z_]+)$/;
     return pattern.test(String(username).toLowerCase())
 }
 
