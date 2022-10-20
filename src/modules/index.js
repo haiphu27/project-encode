@@ -4,6 +4,7 @@ class Modules {
         this.modules={};
         this.modules.Account=require('./Account')
         this.modules.Country=require('./Country')
+        this.modules.GolferAddress=require('./Golfer_address')
     }
 }
 
